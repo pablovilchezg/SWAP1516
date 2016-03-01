@@ -8,3 +8,9 @@ git add practica1/asdf
 
 git commit -a -m "Entrego la practica1 de swap"
 git push
+git rm archivoaborrar
+
+
+USAR MARKDOWN para editar mejor
+
+creamos archivo nombre.md
