@@ -1,6 +1,0 @@
-#Una cabecera
-
-asdfasdfasdfasdf
-
-
-*asdfasdf*
