@@ -39,4 +39,8 @@ la siguiente imagen, poniendo la asignacion de ip estatica
 
 ![nuevoarchivointerface](./nuevoarchivointerface.png "Archivo interfaces nuevo")
 
+Finalmente, con *ifconfig* vemos el resultado, con las ip correctas
+
+![instaladoconipscorregidas](./instaladoconipscorregidas.png "IPs diferentes para cada maquina")
+
 Ya tenemos las maquinas virtuales funcionando y comunicadas entre ellas.
