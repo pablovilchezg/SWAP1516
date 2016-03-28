@@ -12,13 +12,8 @@ a las dos maquinas.
 ![instaladoconip](./instaladoconip.png "Misma IP en las dos maquinas")
 
 Por tanto, procedemos a cambiar las ip ejecutando:
-:::bash
-sudo nano /etc/network/interfaces
 
-    import lifetime
-    
-    for each_day in lifetime.days():
-        carpe_diem()
+    sudo nano /etc/network/interfaces
 
 Y editamos el archivo con los diferentes parametros que se muestran en
 la siguiente imagen
