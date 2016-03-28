@@ -30,7 +30,9 @@ Para realizar esto, debemos generar una clave, copiar la pública en la maquina 
 Así ya no nos pedirá mas la contraseña.
 
 En la siguiente imagen generamos la clave RSA con
+
     ssh-keygen -t rsa
+
 Y pulsamos enter hasta que termina
 
 ![sshkeygen](./sshkeygen.png "Generamos clave RSA")
@@ -43,8 +45,10 @@ También añadir, que hay que crear el archivo **authorized_keys** en el directo
 con la clave publica de la m2 porque sino pide la contraseña al realizar el comando *rsync*
 
 Además, he generado un fichero de configuración en *~/.ssh/config* y en */root/.ssh/config*
-con la información de acceso a m1 y así acceder fácilmente ejecutando.
+con la información de acceso a m1 y así acceder fácilmente ejecutando:
+
     ssh m1
+
 Ya sin solicitar contraseña ni tener que poner usuario e ip siempre
 
 ![sshconfig](./sshconfig.png "Configuracion de acceso a m1 en ssh")
