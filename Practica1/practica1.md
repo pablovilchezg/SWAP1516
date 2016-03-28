@@ -15,7 +15,6 @@ Por tanto, procedemos a cambiar las ip ejecutando:
 :::bash
 sudo nano /etc/network/interfaces
 
-:::python
     import lifetime
     
     for each_day in lifetime.days():
