@@ -1,8 +1,24 @@
 <pregunta>
-  <enunciado>el texto del enunciado</enunciado>
-  <opcionA>primera opcion</opcionA>
-  <opcionB>segunda opcion</opcionB>
-  <opcionC>tercera opcion</opcionC>
-  <opcionD>cuarta opcion</opcionD>
+  <enunciado>La no disponibilidad no programada:</enunciado>
+  <opcionA>Es la que te señala una empresa para ofrecerte el servicio y garantizar la disponibilidad</opcionA>
+  <opcionB>Te la facilita la empresa para abaratar sus servicios y que resulte más economico para el cliente</opcionB>
+  <opcionC>La empresa no la sabe</opcionC>
+  <opcionD>La empresa no se la facilita al cliente</opcionD>
   <solucion>C</solucion>
+</pregunta>
+<pregunta>
+  <enunciado>Un balanceado de carga eficiente es posible si</enunciado>
+  <opcionA>Se tiene una sóla máquina con el mejor hardware actual a la que repartirle el trabajo</opcionA>
+  <opcionB>Teniendo muchisimas máquinas con el 8086 y un balanceador hardware</opcionB>
+  <opcionC>Un balanceador hardware con la máquina de la opción A</opcionC>
+  <opcionD>Teniendo varios niveles de balanceado</opcionD>
+  <solucion>D</solucion>
+</pregunta>
+<pregunta>
+  <enunciado>El escalado...</enunciado>
+  <opcionA>Vertical añade maquinas al sistema</opcionA>
+  <opcionB>Vertical incrementa o mejora el hardware de un solo servidor</opcionB>
+  <opcionC>Horizontal incrementa o mejora el hardware de un sólo servidor</opcionC>
+  <opcionD>Vertical y horizontal no son tipos de escalado</opcionD>
+  <solucion>B</solucion>
 </pregunta>

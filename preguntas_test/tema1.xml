@@ -1,8 +1,16 @@
 <pregunta>
-  <enunciado>el texto del enunciado</enunciado>
-  <opcionA>primera opcion</opcionA>
-  <opcionB>segunda opcion</opcionB>
-  <opcionC>tercera opcion</opcionC>
-  <opcionD>cuarta opcion</opcionD>
-  <solucion>C</solucion>
+  <enunciado>Para hacer un sitio web escalable</enunciado>
+  <opcionA>Necesitas un cold spare server</opcionA>
+  <opcionB>Necesitas configurar varias maquinas que se dediquen a un servicio</opcionB>
+  <opcionC>No es suficiente con un cold spare server, necesitas dos</opcionC>
+  <opcionD>Ninguna de las anteriores es correcta</opcionD>
+  <solucion>D</solucion>
+</pregunta>
+<pregunta>
+  <enunciado>Una actualización se debe testar primero</enunciado>
+  <opcionA>En un servidor de producción, los otros ya se actualizaran automaticamente</opcionA>
+  <opcionB>En el servidor de desarrollo</opcionB>
+  <opcionC>En todos los servidores a la vez, haciendo antes una copia de respaldo del servidor de desarrollo</opcionC>
+  <opcionD>Se hace una copia de respaldo de los servidores de producción y se instala en ellos</opcionD>
+  <solucion>B</solucion>
 </pregunta>
