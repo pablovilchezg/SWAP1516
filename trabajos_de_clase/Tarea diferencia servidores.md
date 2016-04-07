@@ -5,7 +5,6 @@
 Se usa como proxy inverso ligero de alto rendimiento y proxy de protocolos de correo,
 servirdor HTTP
 
-
 ##Thttpd
 
 Se usa como servidor http ligero, portatil y seguro.
