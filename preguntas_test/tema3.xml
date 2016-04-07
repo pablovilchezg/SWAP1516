@@ -1,0 +1,16 @@
+<pregunta>
+  <enunciado>NAT es..</enunciado>
+  <opcionA>El protocolo de acceso seguro a granjas web</opcionA>
+  <opcionB>Un lenguaje de programación de alto nivel para facilitar el reencaminamiento de paquetes</opcionB>
+  <opcionC>Un traductor de direcciones de red para transformar los paquetes TCP en paquetes IP y viceversa</opcionC>
+  <opcionD>Un mecanismo utilizado por los routers IP para intercambiar las direcciones IP de los paquetes en tiempo real</opcionD>
+  <solucion>D</solucion>
+</pregunta>
+<pregunta>
+  <enunciado>¿Qué configuración es más segura?</enunciado>
+  <opcionA>Sin DMZ</opcionA>
+  <opcionB>DMZ doble</opcionB>
+  <opcionC>DMZ tradicional</opcionC>
+  <opcionD>DMZ simple</opcionD>
+  <solucion>B</solucion>
+</pregunta>
