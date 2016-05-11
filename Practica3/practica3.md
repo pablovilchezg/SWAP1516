@@ -4,7 +4,8 @@
 
 Primero añadimos la clave
 
-```    cd /tmp/
+``` 
+	cd /tmp/
     wget http://nginx.org/keys/nginx_signing.key
     apt-key add /tmp/nginx_signing.key
     rm -f /tmp/nginx_signing.key
@@ -14,9 +15,11 @@ Primero añadimos la clave
 
 Y los repositorios
 
-```	echo "deb http://nginx.org/packages/ubuntu/ lucid nginx" >> /etc/apt/sources.list
+```
+	echo "deb http://nginx.org/packages/ubuntu/ lucid nginx" >> /etc/apt/sources.list
     echo "deb-src http://nginx.org/packages/ubuntu/ lucid nginx" >> /etc/apt/sources.list
 ```
+
 ![reponginx](./2reposnginx.png "Añadir repositorios NGINX")
 Finalmente, hacemos un update e instalamos NGINX
     sudo apt-get update
