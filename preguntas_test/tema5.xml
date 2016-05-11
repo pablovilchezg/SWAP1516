@@ -1,0 +1,16 @@
+<pregunta>
+  <enunciado>¿Qué medidas nos dan información de las prestaciones de un sistema web?</enunciado>
+  <opcionA>Conexiones por segundo</opcionA>
+  <opcionB>Número total de conexiones concurrentes</opcionB>
+  <opcionC>Rendimiento en bits por segundo</opcionC>
+  <opcionD>Todas las respuestas son correctas</opcionD>
+  <solucion>D</solucion>
+</pregunta>
+<pregunta>
+  <enunciado>Las pruebas Humo (Smoke) son:</enunciado>
+  <opcionA>Cargas lo más parecidas a la real. Se ejecutan en periodos cortos para ver los tiempos de respuesta que tendrán los usuarios</opcionA>
+  <opcionB>Actividad creciente hasta detectar el punto de saturación</opcionB>
+  <opcionC>Pruebas preliminares para comprobar que el sistema está listo para los siguientes test</opcionC>
+  <opcionD>Ninguna opción anterior es correcta</opcionD>
+  <solucion>C</solucion>
+</pregunta>

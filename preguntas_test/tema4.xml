@@ -1,0 +1,16 @@
+<pregunta>
+  <enunciado>El balanceo mediante DNS...</enunciado>
+  <opcionA>Tiene la información de la disponibilidad de las maquinas servidoras</opcionA>
+  <opcionB>Es complicada de implementar pero efectiva</opcionB>
+  <opcionC>Asigna direcciones IP diferentes para el mismo sitio</opcionC>
+  <opcionD>Todas las anteriores son incorrectas</opcionD>
+  <solucion>C</solucion>
+</pregunta>
+<pregunta>
+  <enunciado>¿Qué es la persistencia?</enunciado>
+  <opcionA>Si un dispositivo falla, otro pasa a hacer su función</opcionA>
+  <opcionB>Mantenimiento del tráfico de un usuario dirigido al servidor que comenzó a atenderlo</opcionB>
+  <opcionC>Comprobar si un servidor está activo o caído para reenviarle más tráfico</opcionC>
+  <opcionD>Ninguna opción es correcta</opcionD>
+  <solucion>B</solucion>
+</pregunta>
