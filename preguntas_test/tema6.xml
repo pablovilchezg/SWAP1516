@@ -1,0 +1,16 @@
+<pregunta>
+  <enunciado>¿De qué forma podemos asegurar nuestro servidor?</enunciado>
+  <opcionA>Eliminando los drivers de todas las tarjetas de red</opcionA>
+  <opcionB>Agregar nuevas cuentas y grupos para que haya variedad</opcionB>
+  <opcionC>Nunca renombrar el usuario root, ya que entonces sería muy facil hackear el archivo de contraseñas</opcionC>
+  <opcionD>Eliminar servicios innecesarios y usar filtros TCP/IP</opcionD>
+  <solucion>D</solucion>
+</pregunta>
+<pregunta>
+  <enunciado>¿Qué objetivos son los principales en seguridad?</enunciado>
+  <opcionA>Confidencialidad y escalabilidad</opcionA>
+  <opcionB>Eficiencia, disponibilidad y confidencialidad</opcionB>
+  <opcionC>Integridad, disponibilidad y confidencialidad</opcionC>
+  <opcionD>Integridad y protección por contraseña</opcionD>
+  <solucion>C</solucion>
+</pregunta>
