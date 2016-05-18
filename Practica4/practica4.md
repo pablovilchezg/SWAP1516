@@ -4,6 +4,7 @@
 ##Script php ejecutado en las peticiones
 
 ```html
+
 <HTML>
 <HEAD>
 <TITLE>APACHE BENCHMARK</TITLE>
@@ -13,6 +14,7 @@ M1 o M2 funciona, archivo para realizar el benchmark
 
 
 ```php
+
 <?php
 $tiempo_inicio = microtime(true);
 for ($i=0; $i<100000; $i++){
@@ -24,6 +26,7 @@ for ($i=0; $i<100000; $i++){
 $tiempo_fin = microtime(true);
 echo "Tiempo empleado: " . round($tiempo_fin - $tiempo_inicio, 4) ;
 ?>
+
 ```
 
 </BODY>
@@ -35,8 +38,10 @@ echo "Tiempo empleado: " . round($tiempo_fin - $tiempo_inicio, 4) ;
 
 Vamos a ver el rendimiento del servidor utilizando Apache Benchmark. Para ello vamos a hacer el test con el siguiente comando
 
-``` 
+```
+
 	ab -n 1000 -c 5 http://10.0.0.4/index.php
+	
 ```
 
 ![abejemplo](./1abejemplo.png "Ejemplo de ejecucion AB")
@@ -119,7 +124,8 @@ Una vez ejecutado todo, obtenemos los siguientes datos de AB y Siege, con los qu
 
 ![resultados](./4resultados.png "Resultados de las ejecuciones")
 
-A continuación tenemos la tabla con los datos filtrados para AB. El promedio y la desviación, además de las gráficas.
+A continuación tenemos la tabla con los datos filtrados para AB.
+El promedio y la desviación, además de las gráficas.
 
 ###Datos de AB
 
@@ -213,6 +219,7 @@ Failed transactions: 0
 
 Para Nginx y Haproxy hay un tiempo de respuesta:
 Response time: 0,20
+
 Para m1 el tiempo de respuesta es:
 Response time: 0,39
 
