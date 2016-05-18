@@ -12,6 +12,7 @@
 <BODY>
 M1 o M2 funciona, archivo para realizar el benchmark
 
+```
 
 ```php
 
@@ -29,6 +30,8 @@ echo "Tiempo empleado: " . round($tiempo_fin - $tiempo_inicio, 4) ;
 
 ```
 
+```html
+
 </BODY>
 </HTML>
 
@@ -41,7 +44,7 @@ Vamos a ver el rendimiento del servidor utilizando Apache Benchmark. Para ello v
 ```
 
 	ab -n 1000 -c 5 http://10.0.0.4/index.php
-	
+
 ```
 
 ![abejemplo](./1abejemplo.png "Ejemplo de ejecucion AB")
