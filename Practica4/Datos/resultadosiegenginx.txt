@@ -1,0 +1,60 @@
+Availability:		      100.00 %
+Availability:		      100.00 %
+Availability:		      100.00 %
+Availability:		      100.00 %
+Availability:		      100.00 %
+Availability:		      100.00 %
+Availability:		      100.00 %
+Availability:		      100.00 %
+Availability:		      100.00 %
+Availability:		      100.00 %
+Elapsed time:		       59.34 secs
+Elapsed time:		       59.93 secs
+Elapsed time:		       59.97 secs
+Elapsed time:		       59.96 secs
+Elapsed time:		       59.95 secs
+Elapsed time:		       59.97 secs
+Elapsed time:		       59.94 secs
+Elapsed time:		       59.98 secs
+Elapsed time:		       59.97 secs
+Elapsed time:		       59.94 secs
+Response time:		        0.20 secs
+Response time:		        0.20 secs
+Response time:		        0.20 secs
+Response time:		        0.20 secs
+Response time:		        0.20 secs
+Response time:		        0.20 secs
+Response time:		        0.20 secs
+Response time:		        0.20 secs
+Response time:		        0.20 secs
+Response time:		        0.20 secs
+Transaction rate:	       75.14 trans/sec
+Transaction rate:	       74.34 trans/sec
+Transaction rate:	       74.97 trans/sec
+Transaction rate:	       74.98 trans/sec
+Transaction rate:	       74.90 trans/sec
+Transaction rate:	       74.54 trans/sec
+Transaction rate:	       74.81 trans/sec
+Transaction rate:	       74.71 trans/sec
+Transaction rate:	       74.82 trans/sec
+Transaction rate:	       74.21 trans/sec
+Failed transactions:	           0
+Failed transactions:	           0
+Failed transactions:	           0
+Failed transactions:	           0
+Failed transactions:	           0
+Failed transactions:	           0
+Failed transactions:	           0
+Failed transactions:	           0
+Failed transactions:	           0
+Failed transactions:	           0
+Longest transaction:	        0.54
+Longest transaction:	        0.65
+Longest transaction:	        0.59
+Longest transaction:	        0.55
+Longest transaction:	        0.64
+Longest transaction:	        0.75
+Longest transaction:	        0.62
+Longest transaction:	        0.59
+Longest transaction:	        0.57
+Longest transaction:	        0.72

@@ -1,0 +1,30 @@
+Time taken for tests:   13.081 seconds
+Time taken for tests:   13.524 seconds
+Time taken for tests:   13.074 seconds
+Time taken for tests:   13.186 seconds
+Time taken for tests:   13.395 seconds
+Time taken for tests:   13.322 seconds
+Time taken for tests:   13.314 seconds
+Time taken for tests:   13.486 seconds
+Time taken for tests:   13.283 seconds
+Time taken for tests:   13.091 seconds
+Failed requests:        105
+Failed requests:        109
+Failed requests:        921
+Failed requests:        109
+Failed requests:        112
+Failed requests:        102
+Failed requests:        102
+Failed requests:        99
+Failed requests:        106
+Failed requests:        106
+Requests per second:    76.45 [#/sec] (mean)
+Requests per second:    73.94 [#/sec] (mean)
+Requests per second:    76.49 [#/sec] (mean)
+Requests per second:    75.84 [#/sec] (mean)
+Requests per second:    74.65 [#/sec] (mean)
+Requests per second:    75.07 [#/sec] (mean)
+Requests per second:    75.11 [#/sec] (mean)
+Requests per second:    74.15 [#/sec] (mean)
+Requests per second:    75.28 [#/sec] (mean)
+Requests per second:    76.39 [#/sec] (mean)

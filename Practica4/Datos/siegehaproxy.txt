@@ -1,0 +1,230 @@
+** SIEGE 3.0.8
+** Preparing 15 concurrent users for battle.
+The server is now under siege...
+
+Lifting the server siege...-      done.
+
+Transactions:		        4447 hits
+Availability:		      100.00 %
+Elapsed time:		       59.45 secs
+Data transferred:	        0.64 MB
+Response time:		        0.20 secs
+Transaction rate:	       74.80 trans/sec
+Throughput:		        0.01 MB/sec
+Concurrency:		       14.91
+Successful transactions:        4447
+Failed transactions:	           0
+Longest transaction:	        0.55
+Shortest transaction:	        0.03
+ 
+[[1;33merror[0m] unable to create log file: /var/log/siege.log: Permission denied
+
+
+
+** SIEGE 3.0.8
+** Preparing 15 concurrent users for battle.
+The server is now under siege...
+
+Lifting the server siege...-      done.
+
+Transactions:		        4478 hits
+Availability:		      100.00 %
+Elapsed time:		       59.95 secs
+Data transferred:	        0.64 MB
+Response time:		        0.20 secs
+Transaction rate:	       74.70 trans/sec
+Throughput:		        0.01 MB/sec
+Concurrency:		       14.92
+Successful transactions:        4478
+Failed transactions:	           0
+Longest transaction:	        0.52
+Shortest transaction:	        0.02
+ 
+[[1;33merror[0m] unable to create log file: /var/log/siege.log: Permission denied
+
+
+
+** SIEGE 3.0.8
+** Preparing 15 concurrent users for battle.
+The server is now under siege...
+
+Lifting the server siege...-      done.
+
+Transactions:		        4488 hits
+Availability:		      100.00 %
+Elapsed time:		       59.97 secs
+Data transferred:	        0.65 MB
+Response time:		        0.20 secs
+Transaction rate:	       74.84 trans/sec
+Throughput:		        0.01 MB/sec
+Concurrency:		       14.92
+Successful transactions:        4488
+Failed transactions:	           0
+Longest transaction:	        0.52
+Shortest transaction:	        0.03
+ 
+[[1;33merror[0m] unable to create log file: /var/log/siege.log: Permission denied
+
+
+
+** SIEGE 3.0.8
+** Preparing 15 concurrent users for battle.
+The server is now under siege...
+
+Lifting the server siege...-      done.
+
+Transactions:		        4486 hits
+Availability:		      100.00 %
+Elapsed time:		       59.97 secs
+Data transferred:	        0.65 MB
+Response time:		        0.20 secs
+Transaction rate:	       74.80 trans/sec
+Throughput:		        0.01 MB/sec
+Concurrency:		       14.92
+Successful transactions:        4486
+Failed transactions:	           0
+Longest transaction:	        0.46
+Shortest transaction:	        0.03
+ 
+[[1;33merror[0m] unable to create log file: /var/log/siege.log: Permission denied
+
+
+
+** SIEGE 3.0.8
+** Preparing 15 concurrent users for battle.
+The server is now under siege...
+
+Lifting the server siege...-      done.
+
+Transactions:		        4488 hits
+Availability:		      100.00 %
+Elapsed time:		       59.96 secs
+Data transferred:	        0.65 MB
+Response time:		        0.20 secs
+Transaction rate:	       74.85 trans/sec
+Throughput:		        0.01 MB/sec
+Concurrency:		       14.91
+Successful transactions:        4488
+Failed transactions:	           0
+Longest transaction:	        0.63
+Shortest transaction:	        0.02
+ 
+[[1;33merror[0m] unable to create log file: /var/log/siege.log: Permission denied
+
+
+
+** SIEGE 3.0.8
+** Preparing 15 concurrent users for battle.
+The server is now under siege...
+
+Lifting the server siege...-      done.
+
+Transactions:		        4565 hits
+Availability:		      100.00 %
+Elapsed time:		       59.99 secs
+Data transferred:	        0.66 MB
+Response time:		        0.20 secs
+Transaction rate:	       76.10 trans/sec
+Throughput:		        0.01 MB/sec
+Concurrency:		       14.93
+Successful transactions:        4565
+Failed transactions:	           0
+Longest transaction:	        0.51
+Shortest transaction:	        0.02
+ 
+[[1;33merror[0m] unable to create log file: /var/log/siege.log: Permission denied
+
+
+
+** SIEGE 3.0.8
+** Preparing 15 concurrent users for battle.
+The server is now under siege...
+
+Lifting the server siege...-      done.
+
+Transactions:		        4572 hits
+Availability:		      100.00 %
+Elapsed time:		       59.97 secs
+Data transferred:	        0.66 MB
+Response time:		        0.20 secs
+Transaction rate:	       76.24 trans/sec
+Throughput:		        0.01 MB/sec
+Concurrency:		       14.93
+Successful transactions:        4572
+Failed transactions:	           0
+Longest transaction:	        0.44
+Shortest transaction:	        0.02
+ 
+[[1;33merror[0m] unable to create log file: /var/log/siege.log: Permission denied
+
+
+
+** SIEGE 3.0.8
+** Preparing 15 concurrent users for battle.
+The server is now under siege...
+
+Lifting the server siege...-      done.
+
+Transactions:		        4570 hits
+Availability:		      100.00 %
+Elapsed time:		       59.98 secs
+Data transferred:	        0.66 MB
+Response time:		        0.20 secs
+Transaction rate:	       76.19 trans/sec
+Throughput:		        0.01 MB/sec
+Concurrency:		       14.93
+Successful transactions:        4570
+Failed transactions:	           0
+Longest transaction:	        0.45
+Shortest transaction:	        0.02
+ 
+[[1;33merror[0m] unable to create log file: /var/log/siege.log: Permission denied
+
+
+
+** SIEGE 3.0.8
+** Preparing 15 concurrent users for battle.
+The server is now under siege...
+
+Lifting the server siege...-      done.
+
+Transactions:		        4571 hits
+Availability:		      100.00 %
+Elapsed time:		       59.98 secs
+Data transferred:	        0.66 MB
+Response time:		        0.20 secs
+Transaction rate:	       76.21 trans/sec
+Throughput:		        0.01 MB/sec
+Concurrency:		       14.94
+Successful transactions:        4571
+Failed transactions:	           0
+Longest transaction:	        0.45
+Shortest transaction:	        0.02
+ 
+[[1;33merror[0m] unable to create log file: /var/log/siege.log: Permission denied
+
+
+
+** SIEGE 3.0.8
+** Preparing 15 concurrent users for battle.
+The server is now under siege...
+
+Lifting the server siege...-      done.
+
+Transactions:		        4566 hits
+Availability:		      100.00 %
+Elapsed time:		       59.99 secs
+Data transferred:	        0.66 MB
+Response time:		        0.20 secs
+Transaction rate:	       76.11 trans/sec
+Throughput:		        0.01 MB/sec
+Concurrency:		       14.93
+Successful transactions:        4567
+Failed transactions:	           0
+Longest transaction:	        0.49
+Shortest transaction:	        0.02
+ 
+[[1;33merror[0m] unable to create log file: /var/log/siege.log: Permission denied
+
+
+
