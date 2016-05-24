@@ -63,7 +63,7 @@ Ahora en m2, creamos la base de datos contactos. Ya podemos restaurar la copia e
 
 ```
 
-![backupbdenm2](./5creardbconbackup.png "Hacer backup con la DB")
+![backupbdenm2](./5creadbconbackup.png "Hacer backup con la DB")
 
 Por último comprobamos que la base de datos se ha grabado correctamente:
 
@@ -112,7 +112,7 @@ sudo service mysql start
 
 ```
 
-Usando *service mysql restart* se reinicia el servicio bien, sin embargo con init.d daba errores como el siguiente:
+Usando *service mysql restart* se reinicia el servicio bien, sin embargo con init.d daba errores como el siguiente, que según he leído, es porque no init.d no cerraba bien el servicio:
 
 ![errorinitd](./7errorinitd.png "Error al reiniciar servicio")
 
@@ -125,7 +125,7 @@ En el slave ejecutamos:
 
 ![iniciarslave](./9iniciarslave.png "Sentencias para esclavo")
 
-Y vemos el estado del slave:
+Y vemos el estado del slave, el cual tiene *Seconds_Behind_Master* a cero, que es el estado correcto:
 
 ![slavefuncionando](./91slavefuncionando.png "Esclavo funcionando OK")
 
