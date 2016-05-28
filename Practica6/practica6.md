@@ -1,138 +1,107 @@
-#PRACTICA 5
+#PRACTICA 6
 
 
-##Creación base de datos MySQL
+##Configurar RAID por software
 
-Para interactuar con MYSQL, abrimos la consola con:
+Para configurar el RAID utilizaré la m3.
+Añadire dos discos de 1GB cada uno a la maquina virtual, 1RAID.vdi y 2RAID.vdi
 
-```
+![discosVM](./1discosvm.png "Creacion de discos virtuales")
+![lsblk](./2lsblk.png "Dispositivos en linux")
 
-mysql -uroot -p
-
-```
-
-Ponemos la contraseña y ya podemos ejecutar comandos. En las siguientes imagenes creamos una base de datos e insertamos tablas y datos.
-
-![mysql](./1mysql.png "Crear base de datos MYSQL")
-
-![mysql2](./2mysqlcreates.png "Insertar datos en base de datos")
-
-##Replicar la BD con MySQLDump
-
-Para replicar manualmente la base de datos podemos usar MySQLDump, que es una herramienta que viene como parte del cliente de MySQL.
-Antes de ejecutar tenemos que bloquear las lecturas de la base de datos para poder realizar la copia de seguridad.
+A continuación creamos el RAID con:
 
 ```
 
-	mysql -u root -p
-	FLUSH TABLES WITH READ LOCK;
-	quit
+sudo mdadm -C /dev/md0 --level=raid1 --raid-devices=2 /dev/sdb /dev/sdc
 
 ```
 
-Después ya podemos realizar la copia de seguridad con el siguiente comando
+![crearraid](./3crearraid.png "Creamos el RAID")
+
+Y formateamos el nuevo dispositivo md0 con *mkfs*
+
+![formatomkfs](./4formatomkfs.png "Formateamos el dispositivo RAID")
+
+Creamos un directorio en el que montaremos el disco md0, y vemos al final de la imagen que */dev/md0* está en */dat* con formato *ext2*
+
+![montajemd0](./5montajemd0.png "Montamos md0")
+
+Con el siguiente comando vemos los detalles del RAID activo
 
 ```
 
-	mysqldump contactos -u root -p > ./contactos.sql
+sudo mdadm --detail /dev/md0
 
 ```
 
-![mysqldump](./3mysqldump.png "Copia de la base de datos")
+![detalleraidmd0](./6detalleraidmd0.png "Detalle del RAID activo")
 
-Finalmente ya podemos desbloquear la base de datos para que se pueda seguir ejecutando y copiamos con SCP el resultado en m2
+Vemos el UUID del dispositivo para poder ponerlo en fstab
 
-```
+![byuuid](./7byuuid.png "UUID de raid")
 
-	mysql -u root -p
-	UNLOCK TABLES;
-	quit
-	scp ./contactos.sql root@10.0.0.3:/root/contactos.sql
+Metemos el dispositivo en el archivo fstab, que queda de la siguiente forma:
 
-```
+![fstab](./8fstab.png "Archivo fstab")
 
-![desbloqueartablas](./4desbloqdb.png "Desbloquear base datos")
+Y después reiniciamos, y vemos que se ha montado automáticamente con *sudo mount* y además vemos que se ha renombrado a *md127*
 
-Ahora en m2, creamos la base de datos contactos. Ya podemos restaurar la copia en m2
+![mountreinicio](./9mountreinicio.png "RAID montado automaticamente")
 
-```
+Ahora vamos a generar un fallo en un disco
 
-	CREATE DATABASE contactos;
-	sudo cp /root/contactos.sql /home/useras/contactos.sql
-	mysql -u root -p contactos < /home/useras/contactos.sql
+![setfaulty](./91setfaulty.png "Generamos fallo en sdb")
 
-```
+Podemos ver que cuando el disco pasa a estar en fallo, deja de usarse y se continúa con un dispositivo, además de la comprobación de acceder al fichero *asdf*, el cual se lee perfectamente.
 
-![backupbdenm2](./5creardbconbackup.png "Hacer backup con la DB")
+Eliminamos el disco en caliente:
 
-Por último comprobamos que la base de datos se ha grabado correctamente:
+![hotremoved](./92hotremoved.png "Generamos fallo en sdb")
+
+Con el comando siguiente podemos volver a añadir el disco:
 
 ```
 
-	use contactos;
-	show tables;
-	select * from datos;
+sudo mdadm --manage --add /dev/md127 /dev/sdb
 
 ```
 
-![copiaok](./6vercopiadbenm2.png "Comprobacion copia DB")
+##Parte adicional: Servidor NFS
 
-##Replicar la base de datos con maestro-esclavo
+###Servidor
 
-
-Para replicar la base de datos automáticamente, tenemos que cambiar el fichero de configuración con lo siguiente.
-
-En el maestro:
+Para tener un NFS, vamos a instalar el server con apt
 
 ```
 
-	#bind-address 127.0.0.1
-	log_error = /var/log/mysql/error.log
-	server-id = 1
-	log_bin = /var/log/mysql/bin.log
+sudo apt-get install nfs-common nfs-kernel-server
 
 ```
 
-En el esclavo:
+Ahora, en /etc/exports vamos a configurar las carpetas compartidas y los permisos para los usuarios
+
+![exports](./93exports.png "Fichero configuración exports")
+
+Ahora reiniciamos el servicio y le damos permisos a la carpeta
+
+![inicio](./94inicio.png "Iniciar servicio")
+
+###Clientes
+
+Para tener el servicio de los clientes, vamos a instalar el paguete *nfs-common*
 
 ```
 
-	#bind-address 127.0.0.1
-	log_error = /var/log/mysql/error.log
-	server-id = 2
-	log_bin = /var/log/mysql/bin.log
+sudo apt-get install nfs-common
 
 ```
 
-Reiniciamos el servicio en las dos maquinas con:
+Montamos la carpeta en un directorio local llamado *carpetanfs*
 
-```
+![mount](./95mount.png "Montamos la carpeta nfs")
 
-sudo service mysql start
+Una vez montado, intentamos escribir un archivo, no nos deja porque aunque tengamos permisos de escritura y lectura en el fichero de configuración NFS, también en el sistema de la m3 debemos tener permisos para los usuarios en esa carpeta.
+Por lo que como se puede ver en la siguiente imagen, le damos permisos y ya tenemos acceso de escritura en la carpeta NFS.
 
-```
-
-Usando *service mysql restart* se reinicia el servicio bien, sin embargo con init.d daba errores como el siguiente:
-
-![errorinitd](./7errorinitd.png "Error al reiniciar servicio")
-
-Ya podemos crearel maestro esclavo. 
-Para el master ejecutamos los siguientes comandos como muestra la siguiente imagen, además de ver el STATUS en el que se queda:
-
-![createesclavo](./8createesclavo.png "Sentencias para master")
-
-En el slave ejecutamos:
-
-![iniciarslave](./9iniciarslave.png "Sentencias para esclavo")
-
-Y vemos el estado del slave:
-
-![slavefuncionando](./91slavefuncionando.png "Esclavo funcionando OK")
-
-Ya finalmente nos queda ver cómo cuando creamos nuevas tablas en el master, automáticamente se replican en el slave. Para ello creamos datos2 e incluimos una entrada.
-
-![crearnuevatabla](./92crearnuevatabla.png "Nueva tabla datos2")
-
-Vemos las dos máquinas con los mismos datos, que automáticamente se han replicado en m2:
-
-![replicaenslave](./93replicaenslave.png "Datos replicados en m2")
+![compfunc](./96compfunc.png "Comprobar funcionamiento")
