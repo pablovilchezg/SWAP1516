@@ -128,6 +128,17 @@ Una vez terminada la instalación, en el menú *Sensors > View Sensors* podemos 
 
 ![sensors](./imagenes/91sensors.png "Sensores instalados")
 
+
+Ya tenemos instalados los sensores, ahora ya podemos hacer una simulación de ataque, en el que usaremos la herramienta **nmap** que hace un escaneo de puertos además de otras utilidades. Vamos a utilizar el comando **-A 10.0.0.4**
+
+![nmapA](./imagenes/92ataque1nmap-Am3.png "nmap -A")
+
+Como podemos observar en la imagen, al hacer el nmap, refrescamos la web de sensores y vemos que hay ataques realizados a ese sensor.
+
+Si nos metemos en la pestaña Attacks del menu principal de MHN podemos ver los ataques que se han realizado, desde la IP que se han hecho y a qué puertos se ha intentado acceder. Con esto somos capaces de reconocer un ataque y cuál es el objetivo de los atacantes.
+
 ##Bibliografia
 
-[Instalar MHN](https://www.joanesmarti.com/modern-honeypot-network-dejando-un-tarro-de-miel-en-internet/)
+[Repo MHN Github](https://github.com/threatstream/mhn)
+
+[Instalar MHN, dejando un tarro de miel en internet](https://www.joanesmarti.com/modern-honeypot-network-dejando-un-tarro-de-miel-en-internet/)
