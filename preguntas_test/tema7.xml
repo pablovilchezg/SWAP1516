@@ -1,0 +1,16 @@
+<pregunta>
+  <enunciado>¿Qué es la ampliación vertical?</enunciado>
+  <opcionA>Replicar el almacenamiento entre varios servidores</opcionA>
+  <opcionB>Añadir nuevas maquinas duplicándolas</opcionB>
+  <opcionC>Adquirir un mejor hardware más rápido y actualizado</opcionC>
+  <opcionD>Ninguna de las anteriores</opcionD>
+  <solucion>C</solucion>
+</pregunta>
+<pregunta>
+  <enunciado>Factores para diseñar la arquitectura de una BD</enunciado>
+  <opcionA>En numero de sesiones concurrentes en la BD puede afectar al rendimiento de la granja web completa</opcionA>
+  <opcionB>El tipo de accesos a la BD también influye</opcionB>
+  <opcionC>Los discos deben ser HDD, nunca SSD</opcionC>
+  <opcionD>A y B son correctas</opcionD>
+  <solucion>D</solucion>
+</pregunta>
