@@ -71,7 +71,7 @@ sudo supervisorctl status
 
 ```
 
-![estadomhn](./imagenes/4estado.png "Estado de MHN")
+![estadomhn](./imagenes/4estadomhn.png "Estado de MHN")
 
 Como se puede ver en la imagen, da errores en *mhn-celery-worker*. Este problema es provocado por los permisos y se soluciona ejecutando lo siguiente:
 
@@ -100,7 +100,9 @@ Una vez esté funcionando, ya podemos configurar MHN.
 
 Los sensores son apliciones externas a MHN que se pueden desplegar en servidores remotos y en el local, con los que podremos detectar los ataques y cruzar datos en la consola central de MHN
 
-Vamos a instalar dionaea. Para ello seleccionamos Deploy en el menú superior y nos aparece un desplegable, en el cual damos click en Ubuntu - Dionaea.
+Vamos a instalar dionaea. Este honeypot es capaz de capturar y analizar el malware. Levanta varios servicios y espera que los atacantes intenten hacerse con el control de los servicios por medio de payloads y peticiones maliciosas.
+
+Para ello seleccionamos Deploy en el menú superior y nos aparece un desplegable, en el cual damos click en Ubuntu - Dionaea.
 
 Esta acción nos devuelve automáticamente un comando que nos descargará el script el cual ejecutará la instalación.
 
@@ -115,6 +117,13 @@ wget "http://10.0.0.4/api/script/?text=true&script_id=2" -O deploy.sh && sudo ba
 ![dionaea](./imagenes/8dionaea.png "Instalacion Dionaea")
 
 También en otra VM vamos a instalar suricata
+Suricata es una red de alto rendimiento, IPS y motor de supervisión de la seguridad de red. Es Open Source.
+Es altamente escalable, multiproceso por lo que se pueden ejecutar varias instancias.
+Reconoce automáticamente los protocolos más comunes, por lo que las reglas son escritas para el protocolo, no para un puerto especificado.
+También identifica miles de tipos de archivos y puede analizarlos, hacer el MD5, etc.
+
+Para instalarlo volvemos a la pantalla Deploy y seleccionamos Ubuntu - Suricata
+
 
 ```
 
@@ -135,10 +144,24 @@ Ya tenemos instalados los sensores, ahora ya podemos hacer una simulación de at
 
 Como podemos observar en la imagen, al hacer el nmap, refrescamos la web de sensores y vemos que hay ataques realizados a ese sensor.
 
-Si nos metemos en la pestaña Attacks del menu principal de MHN podemos ver los ataques que se han realizado, desde la IP que se han hecho y a qué puertos se ha intentado acceder. Con esto somos capaces de reconocer un ataque y cuál es el objetivo de los atacantes.
+Si nos metemos en la pestaña Attacks del menu principal de MHN podemos ver los ataques que se han realizado, desde la IP que se han hecho y a qué puertos se ha intentado acceder.
+
+![attacks](./imagenes/attacksreport.png "Reporte de Ataques")
+
+Con esto somos capaces de reconocer un ataque y cuál es el objetivo de los atacantes.
+
+En la página principal de MHN tenemos un resumen de los ataques
+
+![dashboard](./imagenes/dashboard.png "Pagina principal MHN")
+
+
 
 ##Bibliografia
 
 [Repo MHN Github](https://github.com/threatstream/mhn)
 
 [Instalar MHN, dejando un tarro de miel en internet](https://www.joanesmarti.com/modern-honeypot-network-dejando-un-tarro-de-miel-en-internet/)
+
+[Suricata](https://seguridadyredes.wordpress.com/2011/02/22/ids-ips-suricata-entendiendo-y-configurando-suricata-parte-i/)
+
+[Dionaea honeypot y gusano445.exe](http://revista.seguridad.unam.mx/numero24/poc-captura-de-malware-con-el-honeypot-dionaea-ii)
